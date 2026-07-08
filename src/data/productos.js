@@ -1,4 +1,4 @@
-const producto = require('../models/Producto');
+const producto = require('../models/producto');
 
 const inventario = [
     new producto(1, "Producto A", "Descripción del Producto A", 10.99),
