@@ -57,31 +57,31 @@ Integracion_continua/
 ```mermaid
 flowchart TD
 
-    A[Desarrollador realiza cambios] --> B[git add / commit / push]
+A[Desarrollador realiza cambios]
+--> B[Git Add, Commit y Push]
 
-    B --> C[GitHub recibe el push]
+B --> C[GitHub recibe el Push]
 
-    C --> D[GitHub Actions]
+C --> D[GitHub Actions]
 
-    D --> E[Clonar repositorio]
+D --> E[Checkout del repositorio]
 
-    E --> F[Instalar dependencias<br/>npm install]
+E --> F[Instalar dependencias]
 
-    F --> G[Análisis estático<br/>npm run lint]
+F --> G[Ejecutar ESLint]
 
-    G --> H[Ejecutar pruebas unitarias e integración<br/>npm test]
+G --> H[Ejecutar pruebas unitarias e integración]
 
-    H --> I[Generar reporte de cobertura<br/>Istanbul (Jest)]
+H --> I[Generar reporte de cobertura con Istanbul]
 
-    I --> J[coverage/lcov.info]
+I --> J[Archivo lcov.info]
 
-    J --> K[Análisis de calidad<br/>SonarCloud]
+J --> K[Análisis en SonarCloud]
 
-    K --> L[Quality Gate]
+K --> L[Quality Gate]
 
-    L --> M[✔ Pipeline exitoso]
+L --> M[Pipeline completado]
 ```
-
 ## Herramientas de calidad
 
 ### ESLint
@@ -188,7 +188,9 @@ El proyecto superó ampliamente este requisito, alcanzando una cobertura del **9
 Las siguientes evidencias respaldan la correcta ejecución del pipeline:
 
 - Captura del pipeline exitoso en GitHub Actions.
+![Captura del pipeline exitoso en GitHub Actions](docs/GitHub_Actions.png)
 - Captura del análisis realizado por SonarCloud.
+![Captura del análisis realizado por SonarCloud](docs/SonarCloud.png)
 - Reporte HTML generado por Istanbul (`coverage/lcov-report/index.html`).
 
 ---
